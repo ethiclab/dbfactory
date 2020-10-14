@@ -1,0 +1,32 @@
+{
+  "name": "@ethiclab/dbfactory",
+  "version": "0.0.1",
+  "description": "An abstraction for read/write access to datasources like mongodb and github using a number of different modes for abstracting collections and objects.",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "node test/index.spec.js",
+    "cover": "nyc npm test"
+  },
+  "keywords": [
+    "git",
+    "rest"
+  ],
+  "author": {
+    "name": "EthicLab Team",
+    "email": "tech@ethiclab.it",
+    "url": "https://ethiclab.it"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/ethiclab/dbfactory.git"
+  },
+  "dependencies": {
+    "deltree": "^1.2.2",
+    "isomorphic-git": "^1.7.8",
+    "mktemp": "^1.0.0"
+  },
+  "devDependencies": {
+    "assert": "^2.0.0"
+  }
+}
