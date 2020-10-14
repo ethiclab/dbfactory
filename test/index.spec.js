@@ -82,4 +82,21 @@ const assert = require("assert");
     await db.close(transactionId)
   }
 
+  db = await dbfactory('https://github.com/ethiclab/db1.git', '.')
+  collection = await db.collection('index.js')
+
+  transactionId = await db.beginTransaction()
+  console.log('transaction id', transactionId)
+  try {
+    let line = 1
+    await collection.replaceOne(transactionId, line++, 'module.exports = {')
+    await collection.replaceOne(transactionId, line++, '  register: (url, router) => {')
+    await collection.replaceOne(transactionId, line++, '  }')
+    await collection.replaceOne(transactionId, line++, '}')
+    await db.commit(transactionId, "index.js")
+    await db.publish(transactionId)
+  } finally {
+    await db.close(transactionId)
+  }
+
 })()
