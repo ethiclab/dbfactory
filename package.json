@@ -24,7 +24,8 @@
   "dependencies": {
     "deltree": "^1.2.2",
     "isomorphic-git": "^1.7.8",
-    "mktemp": "^1.0.0"
+    "mktemp": "^1.0.0",
+    "mongoose": "^5.10.9"
   },
   "devDependencies": {
     "assert": "^2.0.0"
